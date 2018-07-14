@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réserver un Vélib a Lyon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+
+   <div id="informations">
+       <!-- SLIDER -->
+       <div class="fond">
+       </div>
+       <div id="diaporama">
+         <div class="title">
+          <h3 id="titleDiaporama">Voici le titre de la diapo</h3>
+          <p id="down"><i class="pointer fas fa-times-circle"></i></p>
+         </div>
+
+        <div id="elementsDiapo">
+            <p class="elements"><img src="img/diapo1.png"></p>
+            <p class="elements"><img src="img/diapo2.png"></p>
+            <p class="elements"><img src="img/diapo3.png"></p>
+        </div>
+        <div id="footerDiaporama">
+            <p id="playStop"></p>
+        </div>
+        </div>
+   </div>
+
+    <div id="donneesSave">
+        <div id="title_station">Vos Données Enregistrer</div>
+        <div class="donneesEnregistrer">
+            <p id="prenomSave"><span class="nameinformation">Prenom :</span> </p>
+            <p id="nomSave"><span class="nameinformation">Nom :</span> </p>
+        </div>
+        <div class="footer_station">
+            <div id="closeDonnees"><p>Fermer</p></div>
+        </div>
+    </div>
+
+    <header>
+        <h1>Velib</h1>
+        <nav>
+            <label id="donnees" class="pointer activ" style="visibility: hidden;"><i class="icon_white fas fa-save"></i> Vos Données</label>
+            <label class="pointer activ"><i class="icon_white fas fa-bicycle"></i> Vélo</label>
+            <label id="activ_diapo" class="helper no_activ"><i class="icon_white fas fa-question-circle"></i> Informations</label>
+        </nav>
+    </header>
+
+    <div id="map">
+
+    </div>
+
+    <div id="informations_station">
+        <div id="headerStation">
+        </div>
+        <div id="eltStation">
+            <div id="street_station"><i class="round fas fa-map-marker-alt"></i>
+                <p id="element_street"></p>
+            </div>
+            <div id="bike">
+                <i class="round fas fa-bicycle"></i>
+                <div id="number_bike_available"></div>
+                <div id="number_stands_available"></div>
+            </div>
+            <div id="status">
+                <p id="statusStation"></p>
+            </div>
+        <div class="footer_station">
+            <div id="close"><p>Fermer</p></div>
+            <div id="reserver"><p>Reserver</p></div>
+        </div>
+        </div>
+
+        <div id="eltReserv">
+            <h3><i class="fas fa-file-signature"></i> - Réservation</h3>
+            <form id="formReserv" action="#" method="post">
+                <label for="firstName">
+                    <input type="text" id="prenom" placeholder="Prénom" name="firstName" /> <br />
+                </label>
+
+                <label for="lastName">
+                    <input type="text" id="nom" placeholder="Nom" name="lastName" />
+                </label>
+
+                <canvas id="sig-canvas" width="440" height="160">
+		 			Canva non disponible.
+		 		</canvas>
+                <div id="verifSig">
+                    <p>Vous devez signer et remplir tous les champs !</p>
+                </div>
+
+            </form>
+        <div class="footer_station">
+            <div id="cancel"><p>Annuler</p></div>
+            <div id="valid"><p>Valider</p></div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div id="copyright">
+            <p>2018 © Velib</p>
+        </div>
+        <div id="conteneur_informations">
+            <p>Aucune réservation en cours</p>
+        </div>
+        <div id="mentions">
+            <a href="#">Mentions Légales</a>
+        </div>
+    </footer>
+
+
+    <!-- Insert JS -->
+    <script src="js/ajax.js"></script>
+    <script src="js/WebStorage.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="js/googlemap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIORJvfZktf21Fb54I-AV_RRPYfP9xv0U&callback=initMap"
+    async defer></script>
+    <script src="js/slider.js"></script>
+    <script src="./js/reservation.js"></script>
+    <script src="js/chrono.js"></script>
+    <script src="js/signature.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+</html>
