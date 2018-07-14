@@ -1,0 +1,46 @@
+Plande soutenance :
+
+Je suis un développeur qui présente mon projet a un CTO (Chef de Projet ou Responsable dans l'entreprise)
+Durée ~25min minimum + 5min de questions/reponses
+
+
+Présentation du projet :
+
+- Rappel Cahier des charges
+  => On ma demander de réaliser une application web qui permet la réservation de vélo sur la ville de LYON ect...
+    -> Elle permet de réserver un vélo, de faire une nouvelle Réservation
+    -> De voir le nombre de vélo disponible, ainsi que le nombre d'emplacement disponible
+    -> De savoir si un station est ouverte ou fermer pour ne pas se faire avoir :p
+
+  -> L'application a été développer avec différentes technologie sur lesquel on reviendra plus tard.
+  -> J'ai choisit ces technologie pour leurs souplesse et leur grande maintenabilité
+  -> Elle permette entre autre, de ne pas dépendre de la page (celle-ci ne se recharge pas a chaque action)
+  -> Elle permette aussi d'avoir du contenu en temps réel.
+
+  Montrer
+  -> Comme demander, via le cahier des charge un diaporama explicatif a été mis en place, il regroupe des explications sur les actions que l'on peut mener.
+    -> Il est possible de retrouver se diaporama en cliquant sur l'onglet Informations en haut de page.
+    -> Il est possible de visualiser le diaporama avec les touches fléché ou via l'appui sur le bouton lecture/Stop
+
+  -> Comme demander une carte des stations de vélo est également disponible cette carte utilise l'api google map on y retrouve la localisation des stations et des vélo positioné sur des marker personaliser
+    -> Si on clic sur un marker on a accés au informations (Nombre de vélo disponible, emplacement disponible, stations ouverte/fermer). Toutes c'est donées proviennet de l'api JCDECAUX et sont fournis en temps réel.
+
+  -> Nous avons la possibilité de réserver un vélo si un vélo au minimum est disponible sur la stations
+    -> Pour ce faire on doit enregistrer sont nom et prenom et signer. Les champs sont obligatoire, s'il ne sont pas renseigner on ne peut pas réserver de vélorem
+    -> Les données enregistrer via la réservation sont enregistrer via HTML5 Web Storage et sont accessible a tous moment une fois la réservation faite sur l'onglet Données qui apparait
+    -> Une fois la réservation effectué, un décompte de 20 min s'enclenche et apparait en bas de page, il reste actif sur la page temps que l'on ne quitte pas la page. Montrer qu'avec F5 le chrono reste sinon il part
+    -> On peut réserver un nouveau vélo, ce qui déclenchera la modification des données enregistrer et le écompte s'actualisera en consequance
+    ->
+
+Partit Technique :
+
+  -> Le projet utilise uniquement Javascript pour tous les élement.
+    -> Le projet a entierement été coder en POO et ES6 pour etres a jour.
+    => Class
+      -> Montrer la class reservation et expliquer ce quelle fait.
+      -> Montrer la class signature et explique ce quelle fait.
+      -> Montrer la class slider et expliquer ce quelle fait.
+      -> Montrer les actions de web storage.
+      -> Montrer les actions de googlemap.js
+      -> Montrer la class chrono et expliquer ce quelle fait.
+      -> Montrer la requete ajax et expliquer ce quelle fait.

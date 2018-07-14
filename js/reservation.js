@@ -52,6 +52,9 @@ class Reservation{
           saveStorage("prenom", document.getElementById("prenom").value);
           saveStorage("nom", document.getElementById("nom").value);
           saveStorage("timeStampFirstReserv", Date.now());
+          var newStorageDate = Date.now();
+          var newStorageTime = newStorageDate + 1200000;
+          saveStorage("timeStampReserv20", newStorageTime);
           document.getElementById("informations_station").style.display = "none";
 
           //On Stop l'ancien Chrono
@@ -103,6 +106,7 @@ class Reservation{
   verifTimeStamp(){
     //Fonction qui affiche le bon chrono si on reactualise la page
     if(this.verifReservation()){//Si une réservation est déja en cour!
+
       //On récupérer les timestamp sauvegarder et le timestamp actuel
       var timeStampActuel = Date.now();
       var timeStamp20 = displayItem("timeStampReserv20");
